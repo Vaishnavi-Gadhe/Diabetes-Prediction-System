@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body {
+            background-image: url("{% static 'images/Diabetes_Pic2.jpg' %}");
+            /* Set background image properties */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Set body height to full viewport height */
+            height: 100vh;
+            /* Center content vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Style the form container */
+        .form-container {
+            width: 100px;
+            padding: 50px;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style form labels */
+        label {
+            display: block;
+            margin-bottom: 2px;
+            font-weight: bold;
+        }
+
+        /* Style form input fields */
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Style the submit button on hover */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Style the form error message */
+        .error-message {
+            color: #ff0000;
+            margin-top: 2px;
+        }
+
+        /* Style the form success message */
+        .success-message {
+            color: #008000;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <p><em></em></P>
+    <div align='center' class="main">
+        <h1 class="gfg"> Welcome to the predict Page</h1>
+        <h1>It's just a prediction; do consult with a Doctor ????</h1> <br />
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right"> <strong>Pregnancies:</strong> </td>
+                    <td align="left"><input type="text" name="n1"></td>
+                </tr>
+                <tr>
+                    <td align="right"> <strong>Glucose:</strong> </td>
+                    <td align="left"><input type="text" name="n2"></td>
+                </tr>
+                <tr>
+                    <td align="right"> <strong>Blood Pressure:</strong> </td>
+                    <td align="left"><input type="text" name="n3"></td>
+                </tr>
+                <tr>
+                    <td align="right"> <strong>Skin Thickness:</strong> </td>
+                    <td align="left"><input type="text" name="n4"></td>
+                </tr>
+                <tr>
+                    <td align="right"> <strong>Insulin:</strong> </td>
+                    <td align="left"><input type="text" name="n5"></td>
+                </tr>
+                <tr>
+                    <td align="right"> <strong>BMI:</strong> </td>
+                    <td align="left"><input type="text" name="n6"></td>
+                </tr>
+                <tr>
+                    <td align="right"><strong>Diabetes Pedigree Function:</strong> </td>
+                    <td align="left"><input type="text" name="n7"></td>
+                </tr>
+                <tr>
+                    <td align="right"> <strong>Age:</strong> </td>
+                    <td align="left"><input type="text" name="n8"></td>
+                </tr>
+            </table>
+            <input type="submit" value="PREDICT">
+        </form>
+        <div class="row">
+            <h2><em>{{result2}}</em></h2>
+        </div>
+    </div>
+</body>
+
+</html>
